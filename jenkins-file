@@ -11,12 +11,12 @@ stage('print git clone')
 {
 steps {
 sh 'echo git clone'
-
+}
 stage('print test cases')
 {
 steps {
 sh 'echo test cases'
-
+}
 stage('print build job')
 {
 steps {
@@ -27,5 +27,4 @@ sh 'echo build job'
 }
 }
 }
-}
-}
+

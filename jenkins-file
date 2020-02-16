@@ -14,8 +14,10 @@ stage ('validate code')
 {
 steps
 {
-with maven
-sh 'mvn validate'
+withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {
+    sh 'mvn validate'
+}
+
 }
 }
 }

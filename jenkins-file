@@ -1,12 +1,29 @@
+echo 'clone'
+echo 'test cases'
+echo 'build job'
+
 pipeline
-{ 
+{
 agent any
 stages
 {
-stage('print hi')
+stage('print git clone')
 {
 steps {
-sh 'echo hi'
+sh 'echo git clone'
+
+stage('print test cases')
+{
+steps {
+sh 'echo test cases'
+
+stage('print build job')
+{
+steps {
+sh 'echo build job'
+}
+}
+}
 }
 }
 }

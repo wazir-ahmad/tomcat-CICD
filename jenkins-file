@@ -1,0 +1,12 @@
+pipeline
+{ 
+agent any
+{
+stages
+{
+stages('print hi')
+{
+steps {
+sh 'echo hi'
+}
+}

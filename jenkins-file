@@ -1,29 +1,12 @@
-echo 'clone'
-echo 'test cases'
-echo 'build job'
-
 pipeline
-{
-agent any
+{ 
+agent  any
 stages
 {
-stage('print git clone')
+stage('scm checkout')
 {
 steps {
-sh 'echo git clone'
-}
-}
-stage('print test cases')
-{
-steps {
-sh 'echo test cases'
-}
-}
-stage('print build job')
-{
-steps {
-sh 'echo build job'
-}
-}
+
+branch: 'master, 'git: "git 'https://github.com/wazir-ahmad/maven-project.git'
 }
 }

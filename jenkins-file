@@ -6,8 +6,8 @@ stages
 stage('scm checkout')
 {
 steps {
-
 git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
+}
 }
 stage ('validate code')
 {
@@ -18,5 +18,5 @@ withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {
 }
 }
 }
-
+}
 

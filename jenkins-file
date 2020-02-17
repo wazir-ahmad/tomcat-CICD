@@ -9,7 +9,6 @@ steps {
 
 git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
 }
-}
 stage ('validate code')
 {
 steps
@@ -19,5 +18,5 @@ withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {
 }
 }
 }
-}
+
 

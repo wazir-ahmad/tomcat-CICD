@@ -9,12 +9,15 @@ steps {
 git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
 }
 }
-stage ('validate code')
+stage ('validate code') # stage ('install maven')
+
 {
 steps
 {
+withSonarQubeEnv(credentialsId: 'sonar') {
 withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {
-    sh 'mvn validate'}
+    sh 'clean mvn install sonar:sonar'}
+ }
 }
 }
 }

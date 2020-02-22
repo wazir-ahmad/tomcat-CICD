@@ -9,7 +9,7 @@ steps {
 git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
 }
 }
-stage ('install sonar')
+stage ('sonar install')
 {
 steps
 {

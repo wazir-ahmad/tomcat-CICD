@@ -9,7 +9,6 @@ steps {
 git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
 }
 }
-stage ('validate code') # stage ('install maven')
 
 {
 steps

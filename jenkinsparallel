@@ -1,0 +1,27 @@
+pipeline
+{ 
+agent  any
+stage {
+steps {
+stage('scm checkout')
+git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
+}
+}
+stage (' parallel deployment')
+{
+parallel {
+stage('test code')
+{
+steps {
+echo "vm1"
+}
+}
+stage ('compile code')
+{
+steps {
+withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {
+echo "vm2" }
+}
+}
+}
+}

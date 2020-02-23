@@ -22,7 +22,7 @@ steps {
 withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {
 echo "vm2" }
 failfast:true
-}
+}}
 }
 }
 }

@@ -10,13 +10,13 @@ git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
 stage (' parallel deployment')
 {
 parallel {
-stage('test code')
+stage('test')
 {
 steps {
 echo "vm1"
 }
 }
-stage ('compile code')
+stage ('packages')
 {
 steps {
 withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {

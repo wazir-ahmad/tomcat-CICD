@@ -19,12 +19,13 @@ withMaven(jdk: 'localjdk-1.8', maven: 'localmaven'){
 sh 'mvn test'
 }
 }
-
+}
 stage ('package')
 {
 steps {
 withMaven(jdk: 'localjdk-1.8', maven: 'localmaven') {
 sh 'mvn package'
+}
 }
 }
 }

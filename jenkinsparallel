@@ -3,8 +3,9 @@ pipeline
 agent  any
 stages 
 {
-steps {
 stage('scm checkout')
+{
+steps{
 git branch: 'master', url: 'https://github.com/wazir-ahmad/maven-project.git'
 }
 }
@@ -18,7 +19,7 @@ withMaven(jdk: 'localjdk-1.8', maven: 'localmaven'){
 sh 'mvn test'
 }
 }
-}
+
 stage ('package')
 {
 steps {
@@ -27,7 +28,7 @@ sh 'mvn package'
 }
 }
 }
-failfast true
+failFast true
 }
 }
 }
